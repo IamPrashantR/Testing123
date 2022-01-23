@@ -1,0 +1,48 @@
+package Work;
+
+import java.util.ArrayList;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		int[] arr= {1,3,4,3,1,3,3};
+		ArrayList  al= new ArrayList();
+		for(int a=0;a<=arr.length-1;a++)
+		{
+			al.add(arr[a]);
+		}
+		int count=1;
+		int i;
+		int temp=0;
+		for(i=0;i<=al.size()-1;i++)
+		{
+			for(int j=i+1;j<=al.size()-1;j++)
+			{
+				if(al.get(i)==al.get(j))
+				{
+					count++;
+					
+				al.set(j, '');
+				System.out.println(al);
+					
+				}
+				 
+				
+			}
+			if(count>=2)
+			{
+				System.out.println("Duplicate");
+				System.out.println(al.get(i)+"->"+count);
+				count=1;
+			}
+			
+			
+			
+			
+			
+		}
+		
+
+	}
+
+}

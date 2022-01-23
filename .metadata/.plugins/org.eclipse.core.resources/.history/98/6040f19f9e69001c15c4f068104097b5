@@ -1,0 +1,31 @@
+package sample;
+
+import java.util.Scanner;
+
+public class AmstrongNo {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int num=scan.nextInt();
+		int sum=0;
+		int r;
+		int temp=num;
+		while(num!=0)
+		{
+			r=num%10;
+			sum=sum+(r*r*r);
+			num=num/10;
+		}
+		if(temp==num)
+		{
+			System.out.println("number is amstrong number");
+		}
+		else
+		{
+			System.out.println("number is not amstrong number");
+		}
+		
+
+	}
+
+}

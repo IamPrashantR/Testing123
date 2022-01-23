@@ -1,0 +1,53 @@
+package com.practiceproject.qa;
+
+public class Sample1
+{
+
+
+	static void seprateString(String str)
+	{
+	StringBuffer num,chactr;
+	num=new StringBuffer();
+	chactr= new StringBuffer();
+	int sum=0;
+	for(int i=0;i<=str.length()-1;i++)
+	{
+	
+		if(Character.isDigit(str.charAt(i)))
+		{
+			num=num.append(str.charAt(i));
+				
+		}
+		else
+		{
+			chactr=chactr.append(str.charAt(i));
+		}
+	}
+	System.out.println(num);
+	System.out.println(chactr);
+	String num1= new String(num);
+	char[] strToInt=num1.toCharArray();
+	for(int i=0;i<strToInt.length;i++)
+	{
+		int a=Integer.parseInt(String.valueOf(strToInt[i]));
+		sum=sum+a;
+	}
+	System.out.println(sum);
+	
+	
+	
+	
+	}
+
+
+	
+
+	public static void main(String[] args) 
+	{
+		String str="dghske123jjhgfd34";
+		seprateString(str);
+		
+
+	}
+
+}
